@@ -187,7 +187,7 @@ word_t paddr_read(paddr_t addr, int len, uint8_t mem_type,int skip)
     inst_diff_skip();
     return 0;
   }else if(addr <= clint_max && addr >= clint_base) {
-    printf("addr is %lx\n",addr);
+    // printf("addr is %lx\n",addr);
     inst_diff_skip();
     return 0; 
   }

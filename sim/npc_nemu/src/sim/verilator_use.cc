@@ -36,7 +36,7 @@ void sim_init(int argc, char **argv) {
 	//soc test only
 	// /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/flash/memtest-flash.bin
 	// flash_init("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/loader/rtthread-loader.bin");
-	flash_init("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/flash/rtthread-flash.bin");
+	flash_init("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/loader/rtthread-loader.bin");
 }
 
 void step_and_dump_wave(){
