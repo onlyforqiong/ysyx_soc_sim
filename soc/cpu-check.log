@@ -1,0 +1,260 @@
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module alu(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module br(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module cfu(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module csr(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module cu(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module dmem(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module dmemreq(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module ex2mem(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module id2ex(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module if2id(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module mem2wb(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module addr_cal(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module mul_simple(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module mul_simple_1(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module div_simple(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module div_simple_1(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module muldiv(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module regfile(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module Look_up_table_read_first_with_bundle(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module fifo_with_bundle(
+
+
+2023-01-17 20:08:58,478 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,478 - cpu-check.py[line:86] - ERROR: module pc_detail(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module Look_up_table_read_first_(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module data_ram_simple_two_ports(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module pht_data_with_block_ram(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module PHTS_with_block_ram(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module PHTS_banks_oneissue_block_ram(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module BHT(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module BHT_banks_oneissue(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module Look_up_table_read_first__32(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module data_ram_simple_two_ports_32(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module btb_tag_with_block_ram(
+
+
+2023-01-17 20:08:58,479 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,479 - cpu-check.py[line:86] - ERROR: module Look_up_table_read_first__36(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module data_ram_simple_two_ports_36(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module btb_data_with_block_ram(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module BTB_banks_oneissue_with_block_ram(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module branch_prediction_with_blockram(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module bru_detail(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module lys_cpu(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module icache_tag(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module ysyx_sram_with_mask(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module icache_data(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module inst_cache(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module dcache_tag(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module dcache_data(
+
+
+2023-01-17 20:08:58,480 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,480 - cpu-check.py[line:86] - ERROR: module data_cache(
+
+
+2023-01-17 20:08:58,481 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,481 - cpu-check.py[line:86] - ERROR: module axi_cross_bar(
+
+
+2023-01-17 20:08:58,481 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,481 - cpu-check.py[line:86] - ERROR: module axi_cross_bar_addr_switch(
+
+
+2023-01-17 20:08:58,481 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,481 - cpu-check.py[line:86] - ERROR: module timer_periph(
+
+
+2023-01-17 20:08:58,481 - cpu-check.py[line:85] - ERROR: module name is not right:
+2023-01-17 20:08:58,481 - cpu-check.py[line:86] - ERROR: module ysyx_040886(
+
+
+2023-01-17 20:08:58,481 - cpu-check.py[line:93] - ERROR: Please check module name!!!
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: clock
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: reset
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_interrupt
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awaddr
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awlen
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awsize
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_awburst
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_wready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_wvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_wdata
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_wstrb
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_wlast
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_bready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_bvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_bresp
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_bid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_arready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_arvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_araddr
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_arid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_arlen
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_arsize
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_arburst
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_rready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_rvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_rresp
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_rdata
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_rlast
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_master_rid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awaddr
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awlen
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awsize
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_awburst
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_wready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_wvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_wdata
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_wstrb
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_wlast
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_bready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_bvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_bresp
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_bid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_arready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_arvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_araddr
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_arid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_arlen
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_arsize
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_arburst
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_rready
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_rvalid
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_rresp
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_rdata
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_rlast
+2023-01-17 20:08:58,489 - cpu-check.py[line:121] - ERROR: you need to check code in: io_slave_rid
+2023-01-17 20:08:58,489 - cpu-check.py[line:137] - ERROR: Your core has ERROR in module name and signal interface
+

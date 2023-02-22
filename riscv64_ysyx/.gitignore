@@ -1,0 +1,8 @@
+*.*
+*
+!src/
+!.gitignore
+!build.sbt
+!build.sc
+!README.md
+!LICENSE

@@ -1,0 +1,502 @@
+verilator -MMD --build -cc  --timescale "1ns/1ns" -O0 --x-assign fast --x-initial fast --noassert --trace-fst -j 32 --threads 32 \
+	-top ysyxSoCFull /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/ram/S011HD1P_X32Y2D128_BW.v /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/ram/S011HD1P_X32Y2D128.v /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v ../peripheral/spiFlash/spiFlash.cpp /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/sim/src/verilator_use.cpp /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/sim/main.cpp \
+	-CFLAGS -I../peripheral/uart16550/rtl -CFLAGS -I../peripheral/spi/rtl -CFLAGS -I./include -CFLAGS -DTOP_NAME="\"VysyxSoCFull\"" -LDFLAGS -lSDL2 -LDFLAGS -lSDL2_image  \
+	--Mdir /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/sim/build/obj_dir --exe -o /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/sim/build/ysyxSoCFull 
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:1:8: Duplicate declaration of module: 'alu'
+    1 | module alu(
+      |        ^~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:1:8: ... Location of original declaration
+    1 | module alu(
+      |        ^~~
+                 ... For warning description see https://verilator.org/warn/MODDUP?v=5.003
+                 ... Use "/* verilator lint_off MODDUP */" and lint_on around source to disable this message.
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:102:8: Duplicate declaration of module: 'br'
+  102 | module br(
+      |        ^~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:102:8: ... Location of original declaration
+  102 | module br(
+      |        ^~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:119:8: Duplicate declaration of module: 'cfu'
+  119 | module cfu(
+      |        ^~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:119:8: ... Location of original declaration
+  119 | module cfu(
+      |        ^~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:246:8: Duplicate declaration of module: 'csr'
+  246 | module csr(
+      |        ^~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:246:8: ... Location of original declaration
+  246 | module csr(
+      |        ^~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:496:8: Duplicate declaration of module: 'cu'
+  496 | module cu(
+      |        ^~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:514:8: ... Location of original declaration
+  514 | module cu(
+      |        ^~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:792:8: Duplicate declaration of module: 'dmem'
+  792 | module dmem(
+      |        ^~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:812:8: ... Location of original declaration
+  812 | module dmem(
+      |        ^~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:963:8: Duplicate declaration of module: 'dmemreq'
+  963 | module dmemreq(
+      |        ^~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:983:8: ... Location of original declaration
+  983 | module dmemreq(
+      |        ^~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:1034:8: Duplicate declaration of module: 'ex2mem'
+ 1034 | module ex2mem(
+      |        ^~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:1054:8: ... Location of original declaration
+ 1054 | module ex2mem(
+      |        ^~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:1326:8: Duplicate declaration of module: 'id2ex'
+ 1326 | module id2ex(
+      |        ^~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:1581:8: ... Location of original declaration
+ 1581 | module id2ex(
+      |        ^~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:1800:8: Duplicate declaration of module: 'if2id'
+ 1800 | module if2id(
+      |        ^~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:2241:8: ... Location of original declaration
+ 2241 | module if2id(
+      |        ^~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:1907:8: Duplicate declaration of module: 'mem2wb'
+ 1907 | module mem2wb(
+      |        ^~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:2369:8: ... Location of original declaration
+ 2369 | module mem2wb(
+      |        ^~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:2087:8: Duplicate declaration of module: 'addr_cal'
+ 2087 | module addr_cal(
+      |        ^~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:2744:8: ... Location of original declaration
+ 2744 | module addr_cal(
+      |        ^~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:2095:8: Duplicate declaration of module: 'mul_simple'
+ 2095 | module mul_simple(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:2752:8: ... Location of original declaration
+ 2752 | module mul_simple(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:2239:8: Duplicate declaration of module: 'mul_simple_1'
+ 2239 | module mul_simple_1(
+      |        ^~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:2930:8: ... Location of original declaration
+ 2930 | module mul_simple_1(
+      |        ^~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:2381:8: Duplicate declaration of module: 'div_simple'
+ 2381 | module div_simple(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:3106:8: ... Location of original declaration
+ 3106 | module div_simple(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:2523:8: Duplicate declaration of module: 'div_simple_1'
+ 2523 | module div_simple_1(
+      |        ^~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:3271:8: ... Location of original declaration
+ 3271 | module div_simple_1(
+      |        ^~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:2665:8: Duplicate declaration of module: 'muldiv'
+ 2665 | module muldiv(
+      |        ^~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:3436:8: ... Location of original declaration
+ 3436 | module muldiv(
+      |        ^~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:3015:8: Duplicate declaration of module: 'regfile'
+ 3015 | module regfile(
+      |        ^~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:3805:8: ... Location of original declaration
+ 3805 | module regfile(
+      |        ^~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:3648:8: Duplicate declaration of module: 'Look_up_table_read_first_with_bundle'
+ 3648 | module Look_up_table_read_first_with_bundle(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:4667:8: ... Location of original declaration
+ 4667 | module Look_up_table_read_first_with_bundle(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:7468:8: Duplicate declaration of module: 'fifo_with_bundle'
+ 7468 | module fifo_with_bundle(
+      |        ^~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:10039:8: ... Location of original declaration
+10039 | module fifo_with_bundle(
+      |        ^~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:8077:8: Duplicate declaration of module: 'pc_detail'
+ 8077 | module pc_detail(
+      |        ^~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:10666:8: ... Location of original declaration
+10666 | module pc_detail(
+      |        ^~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:8145:8: Duplicate declaration of module: 'Look_up_table_read_first_'
+ 8145 | module Look_up_table_read_first_(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:10734:8: ... Location of original declaration
+10734 | module Look_up_table_read_first_(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:8741:8: Duplicate declaration of module: 'data_ram_simple_two_ports'
+ 8741 | module data_ram_simple_two_ports(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:11551:8: ... Location of original declaration
+11551 | module data_ram_simple_two_ports(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:8774:8: Duplicate declaration of module: 'pht_data_with_block_ram'
+ 8774 | module pht_data_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:11584:8: ... Location of original declaration
+11584 | module pht_data_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:8807:8: Duplicate declaration of module: 'PHTS_with_block_ram'
+ 8807 | module PHTS_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:11617:8: ... Location of original declaration
+11617 | module PHTS_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:9080:8: Duplicate declaration of module: 'PHTS_banks_oneissue_block_ram'
+ 9080 | module PHTS_banks_oneissue_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:11898:8: ... Location of original declaration
+11898 | module PHTS_banks_oneissue_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:9285:8: Duplicate declaration of module: 'BHT'
+ 9285 | module BHT(
+      |        ^~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:12106:8: ... Location of original declaration
+12106 | module BHT(
+      |        ^~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:10621:8: Duplicate declaration of module: 'BHT_banks_oneissue'
+10621 | module BHT_banks_oneissue(
+      |        ^~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:14080:8: ... Location of original declaration
+14080 | module BHT_banks_oneissue(
+      |        ^~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:10727:8: Duplicate declaration of module: 'Look_up_table_read_first__32'
+10727 | module Look_up_table_read_first__32(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:14186:8: ... Location of original declaration
+14186 | module Look_up_table_read_first__32(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:19483:8: Duplicate declaration of module: 'data_ram_simple_two_ports_32'
+19483 | module data_ram_simple_two_ports_32(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:26523:8: ... Location of original declaration
+26523 | module data_ram_simple_two_ports_32(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:19516:8: Duplicate declaration of module: 'btb_tag_with_block_ram'
+19516 | module btb_tag_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:26556:8: ... Location of original declaration
+26556 | module btb_tag_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:19549:8: Duplicate declaration of module: 'Look_up_table_read_first__36'
+19549 | module Look_up_table_read_first__36(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:26589:8: ... Location of original declaration
+26589 | module Look_up_table_read_first__36(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:28305:8: Duplicate declaration of module: 'data_ram_simple_two_ports_36'
+28305 | module data_ram_simple_two_ports_36(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:38926:8: ... Location of original declaration
+38926 | module data_ram_simple_two_ports_36(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:28338:8: Duplicate declaration of module: 'btb_data_with_block_ram'
+28338 | module btb_data_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:38959:8: ... Location of original declaration
+38959 | module btb_data_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:28371:8: Duplicate declaration of module: 'BTB_banks_oneissue_with_block_ram'
+28371 | module BTB_banks_oneissue_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:38992:8: ... Location of original declaration
+38992 | module BTB_banks_oneissue_with_block_ram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:28634:8: Duplicate declaration of module: 'branch_prediction_with_blockram'
+28634 | module branch_prediction_with_blockram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:39258:8: ... Location of original declaration
+39258 | module branch_prediction_with_blockram(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:28817:8: Duplicate declaration of module: 'bru_detail'
+28817 | module bru_detail(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:39444:8: ... Location of original declaration
+39444 | module bru_detail(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:31020:8: Duplicate declaration of module: 'icache_tag'
+31020 | module icache_tag(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:42036:8: ... Location of original declaration
+42036 | module icache_tag(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:35044:8: Duplicate declaration of module: 'ysyx_sram_with_mask'
+35044 | module ysyx_sram_with_mask(
+      |        ^~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:47594:8: ... Location of original declaration
+47594 | module ysyx_sram_with_mask(
+      |        ^~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:35144:8: Duplicate declaration of module: 'icache_data'
+35144 | module icache_data(
+      |        ^~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:47694:8: ... Location of original declaration
+47694 | module icache_data(
+      |        ^~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:35235:8: Duplicate declaration of module: 'inst_cache'
+35235 | module inst_cache(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:47785:8: ... Location of original declaration
+47785 | module inst_cache(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:37752:8: Duplicate declaration of module: 'dcache_tag'
+37752 | module dcache_tag(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:51275:8: ... Location of original declaration
+51275 | module dcache_tag(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:39984:8: Duplicate declaration of module: 'dcache_data'
+39984 | module dcache_data(
+      |        ^~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:54401:8: ... Location of original declaration
+54401 | module dcache_data(
+      |        ^~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:40009:8: Duplicate declaration of module: 'data_cache'
+40009 | module data_cache(
+      |        ^~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:54426:8: ... Location of original declaration
+54426 | module data_cache(
+      |        ^~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:45665:8: Duplicate declaration of module: 'axi_cross_bar'
+45665 | module axi_cross_bar(
+      |        ^~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:62384:8: ... Location of original declaration
+62384 | module axi_cross_bar(
+      |        ^~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:45849:8: Duplicate declaration of module: 'axi_cross_bar_addr_switch'
+45849 | module axi_cross_bar_addr_switch(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:62581:8: ... Location of original declaration
+62581 | module axi_cross_bar_addr_switch(
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-MODDUP: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:46225:8: Duplicate declaration of module: 'timer_periph'
+46225 | module timer_periph(
+      |        ^~~~~~~~~~~~
+                 /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/mycpu_top.v:62975:8: ... Location of original declaration
+62975 | module timer_periph(
+      |        ^~~~~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29851:6: Cell has missing pin: 'io_ebreakD'
+29851 |   cu _cu (  
+      |      ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io1_eBreakE'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_Pc_NextE'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleE_pc'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleE_data'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleE_mem_fetch_type'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleE_addr'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleE_len'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleE_cache'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_eBreakM'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_Pc_NextM'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleM_pc'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleM_data'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleM_mem_fetch_type'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleM_addr'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleM_len'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29901:10: Cell has missing pin: 'io_mem_trace_budleM_cache'
+29901 |   ex2mem _ex2mem (  
+      |          ^~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io1_eBreakE'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_Pc_NextE'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleE_pc'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleE_data'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleE_mem_fetch_type'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleE_addr'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleE_len'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleE_cache'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_eBreakM'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_Pc_NextM'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleM_pc'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleM_data'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleM_mem_fetch_type'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleM_addr'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleM_len'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29941:10: Cell has missing pin: 'io_mem_trace_budleM_cache'
+29941 |   ex2mem _mem2mem2 (  
+      |          ^~~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29981:9: Cell has missing pin: 'io1_ebreakD'
+29981 |   id2ex _id2ex (  
+      |         ^~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29981:9: Cell has missing pin: 'io2_eBreakE'
+29981 |   id2ex _id2ex (  
+      |         ^~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29981:9: Cell has missing pin: 'io_Pc_NextD'
+29981 |   id2ex _id2ex (  
+      |         ^~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29981:9: Cell has missing pin: 'io_Pc_NextE'
+29981 |   id2ex _id2ex (  
+      |         ^~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_eBreakM'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Pc_NextM'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleM_pc'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleM_data'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleM_mem_fetch_type'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleM_addr'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleM_len'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleM_cache'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_eBreakW'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Pc_NextW'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleW_pc'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleW_data'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleW_mem_fetch_type'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleW_addr'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleW_len'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30061:10: Cell has missing pin: 'io_Mem_trace_budleW_cache'
+30061 |   mem2wb _mem22wb (  
+      |          ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:30100:11: Cell has missing pin: 'io_reg_file_alL_out'
+30100 |   regfile _regfile (  
+      |           ^~~~~~~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_arlock'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_arcache'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_arprot'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_awlock'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_awcache'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_awprot'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_master_wid'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_arlock'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_arcache'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_arprot'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_awlock'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_awcache'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_awprot'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Warning-PINMISSING: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/soc/ysyxSoCFull.v:84892:15: Cell has missing pin: 'io_slave_wid'
+84892 |   ysyx_040886 cpu (  
+      |               ^~~
+%Error-PINNOTFOUND: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29846:6: Pin not found: 'io_int_type_out_int'
+                                                                                                            : ... Suggested alternative: 'io_int_type_timer'
+29846 |     .io_int_type_out_int(_csr_io_int_type_out_int),
+      |      ^~~~~~~~~~~~~~~~~~~
+%Error-PINNOTFOUND: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/ysyx_040886.v:29849:6: Pin not found: 'io_int_type_able_out_int'
+                                                                                                            : ... Suggested alternative: 'io_int_type_able_timer'
+29849 |     .io_int_type_able_out_int(_csr_io_int_type_able_out_int)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 2 error(s), 115 warning(s)
+make: *** [Makefile:46: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/sim/build/ysyxSoCFull] Error 1
