@@ -92,6 +92,7 @@ void lys_difftest_step(vaddr_t pc, vaddr_t npc) {
   // if (ref_r.pc == npc) {
 
     // skip_dut_nr_inst = 0;
+  
   checkregs(&ref_r, npc);
   return;
   // }
@@ -123,12 +124,13 @@ static int decode_exec(Decode *s) {
   }
   //只写了一个定时器中断
   if(cpu_int == 1 && BITS(CSR(MIE),7,7) == 1 && BITS(CSR(MSTATUS),3,3) == 1 ) {
-   
+    
     s->dnpc = isa_raise_intr(0x8000000000000007,s->pc);
     //清除中断使能位
     CSR(MSTATUS) = CSR(MSTATUS) &(~(size_t)(1 << 3));
     CSR(MIP) = CSR(MIP) | (1 << 7 );
   }else {
+
 
 
 
@@ -153,6 +155,7 @@ static int decode_exec(Decode *s) {
 
   INSTPAT("??????? ????? ????? 000 ????? 11001 11", jalr   , I, R(dest) = s->pc + 4 ;s->dnpc = (src2 + src1)&0xfffffffffffffffe;
   #ifdef ITRACE_COND
+
   get_jal_type(s->pc,s->dnpc,jal_or_jalr, BITS(s->isa.inst.val, 19, 15),src2)
   #endif
   ); 
@@ -239,7 +242,7 @@ static int decode_exec(Decode *s) {
   INSTPAT("0000000 00000 00000 000 00000 11100 11", ecall  , N, s->dnpc = isa_raise_intr(0x000000000000000b,s->pc)) ; 
   INSTPAT("0011000 00010 00000 000 00000 11100 11", mret   , N, s->dnpc = CSR(MEPC);size_t bit_mpie = BITS(CSR(MSTATUS),7,7);
             CSR(MSTATUS) = (BITS(CSR(MSTATUS),63,4) << 4 | bit_mpie<<3 | (BITS(CSR(MSTATUS),2,0) ))) ;
-  INSTPAT("0000000 00000 00000 001 00000 00011 11", fence_i, N, printf("fence_i has get"));
+  INSTPAT("0000000 00000 00000 001 00000 00011 11", fence_i, N, );
   INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak , N, NEMUTRAP(s->pc, R(10))); // R(10) is $a0
   INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv    , N, INV(s->pc));
 
@@ -262,8 +265,11 @@ static int decode_exec(Decode *s) {
   }
   // cpu.pc = debug_pc;
   cpu_commited = 1;
+
   //  printf("R(0) is %lx\n",R(0));
+  
   lys_difftest_step(cpu.pc, s->dnpc);
+  
   // get_jal_type
   
  // printf("src1 = %lx and jali = %lx\n",src1,immu_jal(src1));
@@ -281,10 +287,9 @@ void cpu_could_int(void) {
   cpu_int = 1;
 }
 
-void set_gpr_ptr(const svOpenArrayHandle r){
+void set_gpr_ptr_lys(const svOpenArrayHandle r){
   cpu_gpr = (size_t*)(((VerilatedDpiOpenVar*)r)->datap());
   // cpu.gpr =  (size_t * )cpu_gpr;
-
 }
 
 void set_debug_pc_ptr(size_t r){

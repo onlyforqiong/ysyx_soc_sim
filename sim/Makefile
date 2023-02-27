@@ -1,8 +1,11 @@
 ID = ysyxSoCFull
 TOP = ysyxSoCFull
 TOPNAME = $(TOP)
-V_INC_PATH  = $(abspath ../peripheral/uart16550/rtl) 
-V_INC_PATH += $(abspath ../peripheral/spi/rtl )
+V_INC_PATH  = $(abspath ../perip/uart16550/rtl) 
+V_INC_PATH += $(abspath ../perip/spi/rtl )
+V_INC_PATH += $(abspath ../perip/sdram/rtl)
+V_INC_PATH += $(abspath ../perip/sdram/tb)
+
 INC_PATH = $(abspath ./include )
 INC_PATH += $(abspath ../peripheral/spiFlash/include)
 
@@ -14,6 +17,7 @@ VERILATOR_CFLAGS += --trace-fst -j 16
 VERILATOR_CFLAGS += --threads 16
 
 NOW_PLACE = $(shell pwd)
+ROOT_PATH =  $(abspath $(NOW_PLACE)/..)
 
 BUILD_DIR = $(NOW_PLACE)/build
 OBJ_DIR = $(BUILD_DIR)/obj_dir
@@ -28,15 +32,20 @@ $(shell mkdir -p $(BUILD_DIR))
 VSRCS = $(shell find $(abspath ../riscv64_ysyx) -name "*.v")
 VSRCS += $(shell find $(abspath ../ram) -name "*.v")
 VSRCS += $(shell find $(abspath ../soc) -name "ysyxSoCFull.v")
-VSRCS += $(shell find $(abspath ../peripheral) -name "*.v")
+VSRCS += $(shell find $(abspath ../perip) -name "*.v")
 VSRCS += $(shell find $(abspath ./vsrc) -name "*.v")
+
+SOC_CSRC_LIB_HOME += $(ROOT_PATH)/perip/spiFlash
+SOC_CSRC_LIB_HOME += $(ROOT_PATH)/perip/kdb
+SOC_CSRC_LIB_HOME += $(ROOT_PATH)/perip/screen
+SOC_CXXFILES      += $(shell find $(SOC_CSRC_LIB_HOME) -name "*.cpp")
 
 # CSRCS = $(shell find $(abspath ./csrc) -name "*.c" -or -name "*.cc" -or -name "*.cpp")
 # CSRCS += $(shell find $(abspath .) -name "main.cpp")
-CSRCS += $(shell find $(abspath ../peripheral/spiFlash) -name "spiFlash.cpp")
+CSRCS += $(shell find $(abspath ../perip/spiFlash) -name "spiFlash.cpp")
 CSRCS += $(shell find $(abspath ./src) -name "*.cpp" -or -name "*.cc")
 
-CSRCS += $(SRCS) $(CXXSRC)
+CSRCS += $(SRCS) $(CXXSRC) $(SOC_CXXFILES)
 # CSRCS = $(SIM_NPC_NEMU)/nemu-main.c
 
 # rules for lib

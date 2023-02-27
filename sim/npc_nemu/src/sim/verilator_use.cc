@@ -9,7 +9,7 @@
 #include<VysyxSoCFull.h>
 #include<verilated.h>
 #include<verilated_fst_c.h>
-#include<spiFlash.h>
+
 
 #if defined(__GNUC__) && !defined(__clang__)
 #pragma GCC diagnostic pop
@@ -20,6 +20,7 @@ using namespace std;
 
 Vtop *top = new Vtop;
 VerilatedFstC* tfp = NULL;
+extern "C" void flash_init(char *img);
 
 void sim_init(int argc, char **argv) {	
 	contextp->debug(0);
@@ -36,14 +37,18 @@ void sim_init(int argc, char **argv) {
 	//soc test only
 	// /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/flash/memtest-flash.bin
 	// flash_init("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/loader/rtthread-loader.bin");
-	flash_init("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/program/bin/flash/rtthread-flash.bin");
+	flash_init("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/prog/bin/mem/rtthread-mem.bin");
 }
-
+extern uint64_t g_nr_guest_inst;
 void step_and_dump_wave(){
 	top->eval();
 	contextp->timeInc(1);
 	#if(open_dump) 
-	tfp->dump(contextp->time());
+	if(g_nr_guest_inst > 760000) {
+		tfp->dump(contextp->time());
+	}
+	
+	
 	#endif
 }
 

@@ -1,0 +1,60 @@
+2023.02.23 13:19:42 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/lsp.trace.json or /home/ddddddd/.cache/metals/lsp.trace.json
+2023.02.23 13:19:42 INFO  logging to file /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/metals.log
+2023.02.23 13:19:42 INFO  Started: Metals version 0.11.10 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.75.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.23 13:19:42 INFO  time: initialize in 0.34s
+2023.02.23 13:19:43 WARN  Build server is not auto-connectable.
+2023.02.23 13:19:43 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.02.23 13:26:39 INFO  shutting down Metals
+2023.02.23 19:37:48 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/lsp.trace.json or /home/ddddddd/.cache/metals/lsp.trace.json[0m
+2023.02.23 19:37:48 INFO  logging to file /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/metals.log[0m
+2023.02.23 19:37:48 INFO  Started: Metals version 0.11.10 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.74.3.[0m
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.23 19:37:49 INFO  time: initialize in 0.5s[0m
+2023.02.23 19:37:49 WARN  Build server is not auto-connectable.[0m
+2023.02.23 19:37:49 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2023.02.23 19:37:57 INFO  shutting down Metals[0m
+2023.02.23 19:38:44 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/lsp.trace.json or /home/ddddddd/.cache/metals/lsp.trace.json[0m
+2023.02.23 19:38:44 INFO  logging to file /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/metals.log[0m
+2023.02.23 19:38:44 INFO  Started: Metals version 0.11.10 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.74.3.[0m
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.23 19:38:44 INFO  time: initialize in 0.55s[0m
+2023.02.23 19:38:45 WARN  Build server is not auto-connectable.[0m
+2023.02.23 19:38:45 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2023.02.23 19:38:51 INFO  shutting down Metals[0m
+2023.02.23 19:58:16 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/lsp.trace.json or /home/ddddddd/.cache/metals/lsp.trace.json[0m
+2023.02.23 19:58:16 INFO  logging to file /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/metals.log[0m
+2023.02.23 19:58:16 INFO  Started: Metals version 0.11.10 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.74.3.[0m
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.02.23 19:58:16 INFO  time: initialize in 0.44s[0m
+2023.02.23 19:58:17 WARN  Build server is not auto-connectable.[0m
+2023.02.23 19:58:17 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2023.02.23 19:58:17 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala[0m
+2023.02.23 19:58:18 INFO  no build target found for /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala. Using presentation compiler with project's scala-library version: 3.2.1[0m
+2023.02.23 19:58:19 INFO  time: code lens generation in 1.81s[0m
+2023.02.23 19:58:19 INFO  time: code lens generation in 1.83s[0m
+2023.02.23 19:58:20 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala[0m
+Feb 23, 2023 11:49:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.02.24 08:12:17 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/myCPU.scala[0m
+2023.02.24 11:29:17 INFO  shutting down Metals[0m

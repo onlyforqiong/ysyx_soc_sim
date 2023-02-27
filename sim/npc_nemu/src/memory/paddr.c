@@ -4,7 +4,7 @@
 #include <isa.h>
 #include <verilator_use.h>
 
-#include<spiFlash.h>
+
 
 #if defined(CONFIG_PMEM_MALLOC)
 static uint8_t *pmem = NULL;
@@ -140,6 +140,8 @@ void init_mem()
 }
 
 size_t mem_pc = 0;
+
+extern "C" void flash_read(uint64_t addr, uint64_t *data) ;
 word_t paddr_read(paddr_t addr, int len, uint8_t mem_type,int skip)
 {
 #ifdef CONFIG_ITRACE_COND
@@ -187,7 +189,7 @@ word_t paddr_read(paddr_t addr, int len, uint8_t mem_type,int skip)
     inst_diff_skip();
     return 0;
   }else if(addr <= clint_max && addr >= clint_base) {
-    printf("addr is %lx\n",addr);
+    // printf("addr is %lx\n",addr);
     inst_diff_skip();
     return 0; 
   }

@@ -10,6 +10,7 @@ module log_print (
     input cpu_ebreak_sign
 );  
     reg [31:0] counter;
+    reg [31:0] last_counter;
     integer  fd ;
     initial begin
         fd =   $fopen("/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/sim/log_file.txt","w");
@@ -32,6 +33,10 @@ module log_print (
         if(counter >= 400000000) begin
             $fclose(fd);
             $stop;
+        end
+        if(counter >= last_counter + 32'h2fffff) begin
+            last_counter <= counter;
+            $display ("");
         end
 
         

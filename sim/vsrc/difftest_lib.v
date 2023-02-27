@@ -1,6 +1,6 @@
 import "DPI-C" function void cpu_commited_func();
 import "DPI-C" function void cpu_could_int();
-import "DPI-C" function void set_gpr_ptr(input logic [63:0] a []);
+import "DPI-C" function void set_gpr_ptr_lys(input logic [63:0] a []);
 import "DPI-C" function void set_pc_ptr(input logic [63:0] a);
 import "DPI-C" function void set_debug_pc_ptr(input logic [63:0] a);
 import "DPI-C" function void cpu_ebreak();
@@ -46,7 +46,7 @@ module difftest_commit (
     
     `UNPACK_ARRAY(`data_length,32,gpr,gpr_wire)
     initial begin 
-      set_gpr_ptr(gpr);
+      set_gpr_ptr_lys(gpr);
 
     end
   always @(posedge clock) begin
@@ -57,7 +57,7 @@ module difftest_commit (
       
     end
   end
-  always @(posedge clock ) begin
+  always @(negedge clock ) begin
     if(reset == 1'b0 && inst_commit == 1'b1) begin
         set_pc_ptr(pc);
         set_debug_pc_ptr(debug_pc);
