@@ -26,7 +26,6 @@ class icache_data  extends Module with riscv_macros {
         val        addr   = Input(UInt(addr_length.W))
         val        wdata   = Input(UInt(data_length.W))
         val        rdata  = Output(UInt(40.W))
-
         val        sram = Flipped(new sram_port)
     })
     //开始拼

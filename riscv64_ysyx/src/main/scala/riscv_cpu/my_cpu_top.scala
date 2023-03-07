@@ -378,7 +378,7 @@ object my_CPU_top_test extends App{
     
     // (new ChiselStage).emitVerilog(new mycpu_top)
     (new chisel3.stage.ChiselStage).execute(args, Seq(
-     chisel3.stage.ChiselGeneratorAnnotation(() => new ysyx_22040886),
+    chisel3.stage.ChiselGeneratorAnnotation(() => new ysyx_22040886),
     firrtl.stage.RunFirrtlTransformAnnotation(new AddModulePrefix()),
     ModulePrefixAnnotation("ysyx_22040886_")
 ))

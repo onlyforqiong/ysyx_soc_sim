@@ -98,7 +98,7 @@ class inst_cache  extends Module with riscv_macros {
         // icache_data_way0(0).
     val state_reset = 0.U
     val state_lookup = 1.U
-    val state_access_ram_0 = "b0010".U
+    val state_access_ram_0 =  "b0010".U
     val state_access_ram_1 = "b0011".U
     val state_data_ready   = "b0100".U
     val state_miss_access_ram_0 = "b0101".U
@@ -186,9 +186,9 @@ class inst_cache  extends Module with riscv_macros {
     val hit0 = icache_tag_0.hit.asBool && icache_tag_0.valid.asBool
     val hit1 = icache_tag_1.hit.asBool && icache_tag_1.valid.asBool
  
-    val stage2_sram_addr_reg = RegInit(0.U(data_length.W))//RegEnable(Mux(stage2_flush,0.U,stage1_sram_addr_reg),0.U,stage2_stall) //把这个加4的过程放到stage2，尽量减少stage1的逻辑层数
+    val stage2_sram_addr_reg = RegInit(0.U(3.W))//RegEnable(Mux(stage2_flush,0.U,stage1_sram_addr_reg),0.U,stage2_stall) //把这个加4的过程放到stage2，尽量减少stage1的逻辑层数
 
-    stage2_sram_addr_reg :=  Mux(stage2_flush,0.U,Mux(stage2_stall,stage1_sram_addr_reg,stage2_sram_addr_reg))
+    stage2_sram_addr_reg :=  Mux(stage2_flush,0.U,Mux(stage2_stall,Cat(stage1_sram_addr_reg(3),stage1_sram_addr_reg(1,0)),stage2_sram_addr_reg))
 
     val stage2_sram_cache_reg = RegInit(0.U.asBool)
     stage2_sram_cache_reg := Mux(stage2_flush,0.U,Mux(stage2_stall,stage1_sram_cache_reg,stage2_sram_cache_reg))
@@ -221,8 +221,8 @@ class inst_cache  extends Module with riscv_macros {
     //stage 3  存入指令缓冲队列，在issue阶段前仍然为顺序结构
 
   
-    val word_L_selection0 = icache_data_way0(stage2_sram_addr_reg(3)).rdata
-    val word_L_selection1 = icache_data_way1(stage2_sram_addr_reg(3)).rdata
+    val word_L_selection0 = icache_data_way0(stage2_sram_addr_reg(2)).rdata
+    val word_L_selection1 = icache_data_way1(stage2_sram_addr_reg(2)).rdata
 
 
     val hit_word_L = Mux(stage2_hit0_reg.asBool,word_L_selection0,word_L_selection1) //如果没有命中可以通过data_ok来判断是否需要接受数据

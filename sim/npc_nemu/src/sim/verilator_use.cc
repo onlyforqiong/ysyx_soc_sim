@@ -44,7 +44,7 @@ void step_and_dump_wave(){
 	top->eval();
 	contextp->timeInc(1);
 	#if(open_dump) 
-	if(g_nr_guest_inst > 760000) {
+	if(g_nr_guest_inst > 73000) {
 		tfp->dump(contextp->time());
 	}
 	

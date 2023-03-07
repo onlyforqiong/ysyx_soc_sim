@@ -17,8 +17,9 @@ class csr extends Module with riscv_macros {//hi = Input(UInt(32.W))lo寄存器
 
     val      pc = Input(UInt(data_length.W))
     val      mem_bad_vaddr = Input(UInt(data_length.W))
-    val      exception_type_i = Input(UInt(32.W))
-    val      in_branchjump_jr = Input(UInt(2.W))
+    val      exception_type_i = Input(UInt(31.W))
+    // val      in_branchjump_jr = Input(UInt(2.W))
+    
 
     val      return_pc = Output(UInt(data_length.W))
     val      exception = Output(UInt(1.W))
@@ -86,11 +87,11 @@ class csr extends Module with riscv_macros {//hi = Input(UInt(32.W))lo寄存器
     //目前只有time中断,后面慢慢加呗 有了外部中断
     val commit_int = ((io.int_type.timer && csr_mie(MTIE)) || 
                       (io.int_type.out_int && csr_mie(MEIE)))  && csr_status(MIE_POSITION) && (io.stageW_pc =/= 0.U)
-    val exception_type   = Cat(io.exception_type_i(31,1),commit_int)//15-8分别是六根硬件中断线和两根软件中断线
+    val exception_type   = Cat(io.exception_type_i(30,0),commit_int)//15-8分别是六根硬件中断线和两根软件中断线
 
     //不能是fence_i
     val commit_exception =(exception_type(30,0) =/= 0.U) && !exception_type(EXCEP_FENCE_I)//不等和等于运算更加耗时
-    val commit_eret  = Mux(exception_type(31) && !exception_type(EXCEP_AdELI),1.U(1.W),0.U(1.W) ) //判断到底是啥例外，如果是eret过程中的地址错乱的话，就不是eret例外
+    val commit_eret  = exception_type(31) //判断到底是啥例外，如果是eret过程中的地址错乱的话，就不是eret例外
     val commit_fence_i = exception_type(EXCEP_FENCE_I)
     io.exception     :=  commit_exception || commit_eret.asBool // 有没异常或者是回调的东西
 

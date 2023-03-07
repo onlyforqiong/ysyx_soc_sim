@@ -214,12 +214,11 @@ class axi_cross_bar_addr_switch(cross_num:Int,slave_num:Int,start_addr:Array[Big
         select_s_port_num_r.zipWithIndex.foreach{case(a,index) =>
                 if(index == 0) {
                         if(slave_num > 1) {
-                               
-                                val r_to_be = Mux(access_select_s_port_num_r.asUInt(slave_num - 1,1) =/= 0.U,0.U.asBool,1.U.asBool)
+                                val r_to_be = Mux(access_select_s_port_num_r.drop(1).reduce(_ | _),0.U.asBool,1.U.asBool)
                                 access_select_s_port_num_r(0) := Mux(master_cross_bar.s_port.arvalid.asBool,
                                         access_select_s_port_num_r.drop(1).reduce(_ | _) === 0.U,select_s_port_num_r(index))
                                 select_s_port_num_r(index) := r_to_be
-                                val w_to_be = Mux(access_select_s_port_num_w.asUInt(slave_num - 1,1) =/= 0.U,0.U.asBool,1.U.asBool)
+                                val w_to_be = Mux(access_select_s_port_num_w.drop(1).reduce(_ | _),0.U.asBool,1.U.asBool)
                                 access_select_s_port_num_w(index) := Mux(master_cross_bar.s_port.awvalid.asBool,
                                         access_select_s_port_num_w.drop(1).reduce(_ | _) === 0.U,select_s_port_num_w(index))
                                 select_s_port_num_w(index) := w_to_be
@@ -248,7 +247,7 @@ class axi_cross_bar_addr_switch(cross_num:Int,slave_num:Int,start_addr:Array[Big
         // s_port := Mux1H(select_s_port_num_r)
         val select_port = master_cross_bar.s_port 
 
-        val master_bundle_arready = Wire(Vec(slave_num,master_cross_bar.s_port.araddr.cloneType))  
+        val master_bundle_arready = Wire(Vec(slave_num,master_cross_bar.s_port.arready.cloneType))  
         val master_bundle_rid     = Wire(Vec(slave_num,master_cross_bar.s_port.rid.cloneType))
         val master_bundle_rdata   = Wire(Vec(slave_num,master_cross_bar.s_port.rdata.cloneType))
         val master_bundle_rresp   = Wire(Vec(slave_num,master_cross_bar.s_port.rresp.cloneType))
@@ -291,9 +290,6 @@ class axi_cross_bar_addr_switch(cross_num:Int,slave_num:Int,start_addr:Array[Big
                         // io.s_port(index).arprot   := select_port.arprot 
                         io.s_port(index).arvalid  := select_port.arvalid
                         io.s_port(index).rready   := select_port.rready
-
-
-
 
                 }.otherwise{
                         io.s_port(index).arid     := 0.U 
@@ -357,16 +353,9 @@ class axi_cross_bar_addr_switch(cross_num:Int,slave_num:Int,start_addr:Array[Big
         master_cross_bar.s_port.rresp           := Mux1H(access_select_s_port_num_r,master_bundle_rresp)
         master_cross_bar.s_port.rlast           := Mux1H(access_select_s_port_num_r,master_bundle_rlast) 
         master_cross_bar.s_port.rvalid           := Mux1H(access_select_s_port_num_r,master_bundle_rvalid)
-
-
-        
-        
-
-        
-        
-
-        
-       
-
         
 }
+
+// object crossbar_test extends App{
+//     (new ChiselStage).emitVerilog(new axi_cross_bar_addr_switch(2,2,Array(0,0X02000000),Array(0,0X0200BFFF)))
+// }

@@ -256,26 +256,24 @@ val id_fence_i = id_mret + 1.U
 val id_mynop = 80.U
 
 // alu cmd def
-val ALU_NULL = 0.U
+val ALU_XOR  = 0.U
 val ALU_ADD  = 1.U
 val ALU_ADDE = 2.U
 val ALU_ADDU = 3.U
 val ALU_AND  = 4.U
-val ALU_DIV  = 5.U
-val ALU_DIVU = 6.U
+val ALU_SRL  = 5.U
+val ALU_SUB  = 6.U
 val ALU_LUI  = 7.U
-
+val ALU_SUBE = 8.U
+val ALU_SUBU = 9.U
 val ALU_NOR  = 10.U
 val ALU_OR   = 11.U
 val ALU_SLL  = 12.U
 val ALU_SLT  = 13.U
 val ALU_SLTU = 14.U
 val ALU_SRA  = 15.U
-val ALU_SRL  = 16.U
-val ALU_SUB  = 17.U
-val ALU_SUBE = 18.U
-val ALU_SUBU = 19.U
-val ALU_XOR  = 20.U
+
+
 
 //muldiv cmd def 
 val MULDIV_DIVU   =  0.U
@@ -434,8 +432,10 @@ val MHARTID_NUM  = 0xF14.U
 
 // mhartid
 def sign_extend(value:UInt,length:Int,full_length:Int) = 
-    Cat(Cat(Seq.fill(full_length-length)(value(length-1))),value(length-1,0))
-
+    // Cat(Cat(Seq.fill(full_length-length)(value(length-1))),value(length-1,0))
+    Mux(value(length-1),Cat(~0.U((full_length - length).W),value(length - 1,0)),
+        Cat(0.U((full_length - length).W),value(length - 1,0)))
+    
 def sign_extend(value:UInt,length:Int) = 
     Cat(Cat(Seq.fill(data_length-length)(value(length-1))),value(length-1,0))
 
@@ -479,7 +479,7 @@ def br_state_machine_next_state(code:UInt,state:Bool) :UInt = {
     ))
 }
 //riscv忽略所有的不对齐指令
-def check_unaligned(width:UInt,rd:UInt,memrl:UInt):UInt = 0.U
+def check_unaligned(width:UInt,rd:UInt):UInt = 0.U
     //  (memrl === 0.U && MuxCase(1.U,Seq(
     //     (Cat(width,rd(0)) === "b010".U) -> 0.U,
     //     (Cat(width,rd) === "b1000".U) -> 0.U,

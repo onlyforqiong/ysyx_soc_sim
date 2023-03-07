@@ -58,3 +58,76 @@ Feb 23, 2023 11:49:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint noti
 INFO: Unsupported notification method: $/setTrace
 2023.02.24 08:12:17 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/myCPU.scala[0m
 2023.02.24 11:29:17 INFO  shutting down Metals[0m
+2023.03.03 00:58:23 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/lsp.trace.json or /home/ddddddd/.cache/metals/lsp.trace.json[0m
+2023.03.03 00:58:23 INFO  logging to file /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/.metals/metals.log[0m
+2023.03.03 00:58:23 INFO  Started: Metals version 0.11.10 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.74.3.[0m
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.10.5/scribe-slf4j_2.13-3.10.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.03 00:58:23 INFO  time: initialize in 0.44s[0m
+2023.03.03 00:58:24 WARN  Build server is not auto-connectable.[0m
+2023.03.03 00:58:24 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2023.03.03 00:58:24 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/cache/inst_cache.scala[0m
+2023.03.03 00:58:25 INFO  no build target found for /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/cache/inst_cache.scala. Using presentation compiler with project's scala-library version: 3.2.1[0m
+2023.03.03 00:58:25 INFO  time: code lens generation in 1.54s[0m
+2023.03.03 00:58:27 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/cache/inst_cache.scala[0m
+2023.03.03 01:03:14 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala[0m
+2023.03.03 01:03:19 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala[0m
+Mar 03, 2023 9:25:11 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Mar 03, 2023 9:25:12 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.03.03 21:18:31 INFO  shutting down Metals[0m
+2023.03.07 14:57:12 INFO  Started: Metals version 0.11.11 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.76.0.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.07 14:57:12 INFO  time: initialize in 0.21s
+2023.03.07 14:57:13 WARN  Build server is not auto-connectable.
+2023.03.07 14:57:13 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.07 14:57:13 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala
+2023.03.07 14:57:14 INFO  no build target found for /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.07 14:57:15 INFO  time: code lens generation in 1.92s
+2023.03.07 14:57:33 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/macros.scala
+2023.03.07 15:04:47 INFO  Shutting down server
+2023.03.07 15:04:47 INFO  shutting down Metals
+2023.03.07 15:04:47 INFO  Exiting server
+2023.03.07 16:13:16 INFO  Started: Metals version 0.11.11 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.68.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.07 16:13:16 INFO  time: initialize in 0.21s
+2023.03.07 16:13:16 WARN  Build server is not auto-connectable.
+2023.03.07 16:13:16 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.07 16:13:17 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/lib/fifo.scala
+2023.03.07 16:13:18 INFO  no build target found for /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/lib/fifo.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.07 16:13:18 INFO  time: code lens generation in 1.35s
+Mar 07, 2023 4:17:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.03.07 19:24:59 INFO  Shutting down server
+2023.03.07 19:24:59 INFO  shutting down Metals
+2023.03.07 19:24:59 INFO  Exiting server
+2023.03.07 21:35:25 INFO  Started: Metals version 0.11.11 in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx' for client Visual Studio Code 1.68.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/home/ddddddd/.cache/coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.07 21:35:25 INFO  time: initialize in 0.31s
+2023.03.07 21:35:26 WARN  Build server is not auto-connectable.
+2023.03.07 21:35:26 WARN  no build tool detected in workspace '/home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.07 21:35:26 WARN  no build target for: /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/lib/fifo.scala
+2023.03.07 21:35:27 INFO  no build target found for /home/ddddddd/my_learn/cpu_relative/ysyxSoC_test/ysyx/riscv64_ysyx/src/main/scala/riscv_cpu/core/lib/fifo.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.03.07 21:35:28 INFO  time: code lens generation in 1.94s
+Mar 07, 2023 9:36:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

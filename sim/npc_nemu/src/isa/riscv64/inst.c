@@ -14,7 +14,7 @@
 #define R(i) gpr(i)
 #define Mr vaddr_read
 #define Mw vaddr_write
-#define cpu_commit 1 
+#define cpu_commit 0
 //cpu刚才完成了提交,后面采用dpi-c来写
 
 enum {
@@ -116,7 +116,7 @@ static int decode_exec(Decode *s) {
     single_cycle();
     counter++;
     //不可能连续10000个周期还不能够有指令commit，除非已经挂逼了
-    if(counter >= 500000) {
+    if(counter >= 50000) {
 
       sim_end();
       panic("受不了了");

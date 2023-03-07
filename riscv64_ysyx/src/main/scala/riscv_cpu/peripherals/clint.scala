@@ -25,6 +25,9 @@ class timer_periph(base_addr:UInt) extends  Module with riscv_macros {
     val mtime  =  RegInit(0.U(data_length.W))
     val mtimecmp = RegInit(0.U(data_length.W))
     val msip  =  RegInit(0.U(32.W))
+    val awready_to_be = Wire(Bool())
+    val arready_to_be = Wire(Bool())
+    
 
     // read and write 不能互相影响，应该要主动分开
     val axi_read_state = RegInit(0.U(3.W))
@@ -35,20 +38,30 @@ class timer_periph(base_addr:UInt) extends  Module with riscv_macros {
     val axi_write_data = Wire(UInt(data_length.W))
 
     axi_read_state := MuxLookup(axi_read_state,axi_read_state,Seq(
-        axi_idle   -> Mux(io.axi_port.arvalid.asBool && io.axi_port.arready.asBool,axi_work1,axi_read_state),
+        axi_idle   -> Mux(io.axi_port.arvalid.asBool && arready_to_be.asBool,axi_work1,axi_read_state),
         axi_work1  -> Mux(io.axi_port.rready.asBool,axi_read_state,axi_idle)
         // axi_work1  -> 
     ))
     axi_write_state := MuxLookup(axi_write_state,axi_write_state,Seq(
-        axi_idle   -> Mux(io.axi_port.awvalid.asBool && io.axi_port.awready.asBool,axi_work1,axi_write_state),
+        axi_idle   -> Mux(io.axi_port.awvalid.asBool && awready_to_be.asBool,axi_work1,axi_write_state),
         axi_work1  -> Mux(io.axi_port.wready.asBool,axi_work2,axi_write_state),
         axi_work2  -> axi_idle
         // axi_work1  -> 
     ))
-    axi_read_addr := Mux(io.axi_port.arvalid.asBool && io.axi_port.arready.asBool,io.axi_port.araddr,axi_read_addr)
-    axi_write_addr := Mux(io.axi_port.awvalid.asBool && io.axi_port.awready.asBool,io.axi_port.awaddr,axi_write_addr)
-    axi_write_size := Mux(io.axi_port.awvalid.asBool && io.axi_port.awready.asBool,axi_size2truesize(io.axi_port.awsize),axi_write_size)
-    axi_write_data := io.axi_port.wdata << (io.axi_port.awaddr(2,0) << 3)
+    axi_read_addr := Mux(io.axi_port.arvalid.asBool && arready_to_be.asBool,io.axi_port.araddr,axi_read_addr)
+    axi_write_addr := Mux(io.axi_port.awvalid.asBool && awready_to_be.asBool,io.axi_port.awaddr,axi_write_addr)
+    axi_write_size := Mux(io.axi_port.awvalid.asBool && awready_to_be.asBool,axi_size2truesize(io.axi_port.awsize),axi_write_size)
+    axi_write_data := 
+        // io.axi_port.wdata << (io.axi_port.awaddr(2,0) << 3)
+        MuxLookup(io.axi_port.awaddr(2,0),io.axi_port.wdata,Seq(
+        1.U -> Cat(io.axi_port.wdata((data_length - 1 - 1 * 8),0),0.U((8*1).W)),
+        2.U -> Cat(io.axi_port.wdata((data_length - 1 - 2 * 8),0),0.U((8*2).W)),
+        3.U -> Cat(io.axi_port.wdata((data_length - 1 - 3 * 8),0),0.U((8*3).W)),
+        4.U -> Cat(io.axi_port.wdata((data_length - 1 - 4 * 8),0),0.U((8*4).W)),
+        5.U -> Cat(io.axi_port.wdata((data_length - 1 - 5 * 8),0),0.U((8*5).W)),
+        6.U -> Cat(io.axi_port.wdata((data_length - 1 - 6 * 8),0),0.U((8*6).W)),
+        7.U -> Cat(io.axi_port.wdata((data_length - 1 - 7 * 8),0),0.U((8*7).W))
+    ))
 
     val  read_data  = MuxLookup(axi_read_addr,0.U,Seq(
         (msip_offset + base_addr)  -> msip,
@@ -60,7 +73,7 @@ class timer_periph(base_addr:UInt) extends  Module with riscv_macros {
     io.axi_port.rdata := read_data
     io.axi_port.rlast := axi_read_state === axi_work1 && io.axi_port.rready.asBool
     io.axi_port.rvalid := axi_read_state === axi_work1 
-    io.axi_port.arready := 1.U
+    io.axi_port.arready := arready_to_be
     io.axi_port.rid := 0.U
     io.axi_port.rresp := 0.U
 
@@ -80,9 +93,9 @@ class timer_periph(base_addr:UInt) extends  Module with riscv_macros {
     mtimecmp := Mux(axi_write_state === axi_work1&& io.axi_port.wvalid.asBool && axi_write_addr(data_length - 1,3) === (base_addr + mtimecmp_offset)(data_length - 1,3),
         mtimecmp_to_be.asUInt,mtimecmp)
     msip := Mux(axi_read_addr === axi_work1 && io.axi_port.wvalid.asBool && axi_write_addr === (base_addr + msip_offset),Cat(0.U(31.W),axi_write_data(0)),msip)
+   
 
-
-    io.axi_port.awready  := 1.U
+    io.axi_port.awready  := awready_to_be
     io.axi_port.wready   := axi_write_state === axi_work1
     io.axi_port.bid      := 0.U
     io.axi_port.bresp    := 0.U
@@ -90,6 +103,8 @@ class timer_periph(base_addr:UInt) extends  Module with riscv_macros {
 
     io.int_line := mtime >= mtimecmp
     io.mie      := msip(0)
+    awready_to_be := 1.U.asBool
+    arready_to_be := 1.U.asBool
     // ext_int(0)
     
     
